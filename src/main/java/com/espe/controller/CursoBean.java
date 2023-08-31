@@ -1,4 +1,4 @@
-// Importaciones de clases necesarias
+// Importaciones de todas las clases necesarias para la ejecucion
 package com.espe.controller;
 
 import com.espe.dao.ICursoDAO;
