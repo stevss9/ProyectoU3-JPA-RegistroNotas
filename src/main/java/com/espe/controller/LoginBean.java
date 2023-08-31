@@ -26,7 +26,7 @@ public class LoginBean {
     private String username;
     private String password;
 
-    // Métodos getter y setter para username y password
+    // Métodos getter y setter se genera automaticamente para username y password
     public String getUsername() {
         return username;
     }
