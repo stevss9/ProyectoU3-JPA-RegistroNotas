@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+</h:head>
+
+
+<h:body>
+
+    <ui:composition template = "../templates/commonAdmin.xhtml">
+
+        <ui:define name = "content">
+            <h:form id="agregarNota">
+                <div class="table-container" style="display: flex; justify-content: center"> <!-- Agregar el contenedor para centrar -->
+                    <div>                    <h1>Nuevo nota</h1>
+                        <br></br>
+                        <h:panelGrid columns="2" cellspacing="20" border="1" class="table-style">
+
+                            <h:outputText value="Nota" />
+                            <h:inputText value="#{nota.nota}" />
+
+                            <h:outputText value="Estudiante" />
+                            <h:selectOneMenu value="#{nota.usuario}" >
+                                <f:selectItems value="#{usuarioBean.obtenerEstudiantes()}" var="docente" itemLabel="#{docente.nombre}" itemValue="#{docente.id}" />
+                            </h:selectOneMenu>
+
+                            <h:outputText value="Materia" />
+                            <h:selectOneMenu value="#{nota.materia}" >
+                                <f:selectItems value="#{materiaBean.obtenerMaterias()}" var="materia" itemLabel="#{materia.nombre}" itemValue="#{materia.id}" />
+                            </h:selectOneMenu>
+
+                            <f:facet name="footer">
+                                <h:commandButton value="Guardar" action="#{notaBean.guardar(nota)}" styleClass="button" />
+                            </f:facet>
+                        </h:panelGrid>
+                    </div>
+                </div>
+            </h:form>
+        </ui:define>
+
+
+    </ui:composition>
+
+</h:body>
+</html>

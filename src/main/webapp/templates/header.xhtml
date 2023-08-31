@@ -1,0 +1,51 @@
+<?xml version = "1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns = "http://www.w3.org/1999/xhtml"
+      xmlns:ui = "http://java.sun.com/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+>
+
+
+<h:body>
+
+<ui:composition>
+    <header class="main-header">
+        <nav class="nav-links" style="display: flex; justify-content: space-between; padding: 10px">
+            <h2 style="color: #0056b3">Sistema educativo</h2>
+            <a class="iniciarSesion" href="seguridad/login.xhtml">Iniciar sesion</a>
+        </nav>
+        <!-- Botón del carrito -->
+
+    </header>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h:outputText value="Lista de Productos en el Carrito:" />
+            <ul>
+                <ui:repeat value="#{carritoBean.carrito}" var="item"
+                >
+<div style="display: flex;justify-content: center">
+                    <li>#{item.plato.nombre} (Cantidad: #{item.cantidad})</li>
+
+
+                        <h:form>
+                        <h:commandButton styleClass="eliminar"  value="x" action="#{carritoBean.eliminarProducto(item.plato)}" />
+                        </h:form>
+</div>
+                </ui:repeat>
+
+
+            </ul>
+            <div style="margin: 10px 0;width: 100%;display: flex">
+                <a href="carrito.xhtml" class="compra" style="width: 100%" >Proceder con la compra</a>
+            </div>
+
+
+            <h:commandButton value="Cerrar" styleClass="cerrar" onclick="closeModal()" />
+        </div>
+    </div>
+</ui:composition>
+</h:body>
+</html>
+

@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Estilos para el encabezado */
+.main-header {
+    height: 40px;
+    background-color: #f1f1f1;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+}
+
+.iniciarSesion{
+    background: #00c4ff;
+    border-radius: 20px;
+    padding: 15px;
+    transition: 1s;
+}
+
+.iniciarSesion:hover{
+    background: #0059ff;
+    border-radius: 20px;
+    padding: 15px;
+    transition: 1s;
+}
+/* Estilos para los enlaces de navegación */
+.nav-links a {
+    color: #f6f6f6;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Cambio de color al pasar el mouse sobre los enlaces */
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+
+/* Estilos para el contenido */
+.contenido {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para el footer */
+.main-footer {
+    background-color: #f1f1f1;
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilos para el modal del carrito */
+.carrito-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrito-contenido {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+.button{
+    background: #007bff;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+input{
+    background: #007bff;
+}
+
+input[type=text] {
+     width: 100%;
+     padding: 12px 20px;
+     margin: 8px 0;
+     box-sizing: border-box;
+ }
+
+input[type=submit] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background: #007bff;
+}
+
+.eliminar{
+    background: #ffeded !important;
+    border: none;
+    width: auto;
+    padding: 1px 10px!important;
+    margin: 0!important;
+    height: auto;
+    text-decoration: none;
+    color: red;
+
+}
+
+.cerrar{
+    background: #ff3737 !important;
+    border: none;
+    width: auto;
+    padding: 1px 10px!important;
+    margin: 0!important;
+    height: auto;
+    text-decoration: none;
+    color: white;
+
+}
+
+.compra{
+    background: #37ff7d !important;
+    border: none;
+    width: 100%!important;
+    padding: 5px 10px!important;
+    margin: 0!important;
+    height: auto;
+    text-decoration: none;
+    color: black;
+    margin: 10px 0;
+
+}

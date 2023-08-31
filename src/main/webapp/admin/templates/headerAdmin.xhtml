@@ -1,0 +1,39 @@
+<?xml version = "1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns = "http://www.w3.org/1999/xhtml"
+      xmlns:ui = "http://java.sun.com/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+>
+
+
+<h:body>
+
+<ui:composition>
+    <header class="main-header">
+        <nav class="nav-links" style="display: flex; justify-content: space-between; padding: 20px">
+        <div>
+            <a href="../administrador/index.xhtml">Administrador</a>
+            <a href="../estudiante/index.xhtml">Estudiante</a>
+            <a href="../docente/index.xhtml">Docente</a>
+            <a href="../curso/index.xhtml">Curso</a>
+            <a href="../materia/index.xhtml">Materia</a>
+            <a href="../nota/index.xhtml">Nota</a>
+        </div>
+            <h:form>
+           <h:commandButton value="Cerrar Sesión" styleClass="button" action="#{loginBean.logout()}" /></h:form>
+        </nav>
+    </header>
+    <h:outputScript target="head">
+        function redirectToPage(role) {
+        if (role != 'administrador') {
+            window.location.href = '../../index.xhtml';
+          }
+        }
+        redirectToPage('#{sessionScope.session.rol}');
+    </h:outputScript>
+</ui:composition>
+</h:body>
+</html>
+
