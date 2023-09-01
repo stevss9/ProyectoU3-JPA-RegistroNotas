@@ -12,28 +12,37 @@
 
 <h:body>
 
-    <ui:composition template = "../templates/commonAdmin.xhtml">
+    <ui:composition template="../templates/commonAdmin.xhtml">
 
-        <ui:define name = "content">
+        <!-- Definir la sección de contenido de la página -->
+        <ui:define name="content">
+            <!-- Crear un formulario con un ID para agregar una nueva "nota" -->
             <h:form id="agregarNota">
-                <div class="table-container" style="display: flex; justify-content: center"> <!-- Agregar el contenedor para centrar -->
-                    <div>                    <h1>Nuevo nota</h1>
+                <!-- Crear un contenedor para centrar el contenido -->
+                <div class="table-container" style="display: flex; justify-content: center">
+                    <div>
+                        <h1>Nuevo nota</h1>
                         <br></br>
+                        <!-- Crear una cuadrícula de paneles con 2 columnas, espaciado de 20 y borde de 1, con un estilo de tabla -->
                         <h:panelGrid columns="2" cellspacing="20" border="1" class="table-style">
 
+                            <!-- Mostrar el texto "Nota" y permitir la entrada de texto en un campo -->
                             <h:outputText value="Nota" />
                             <h:inputText value="#{nota.nota}" />
 
+                            <!-- Mostrar el texto "Estudiante" y permitir seleccionar una opción de menú desplegable -->
                             <h:outputText value="Estudiante" />
-                            <h:selectOneMenu value="#{nota.usuario}" >
+                            <h:selectOneMenu value="#{nota.usuario}">
                                 <f:selectItems value="#{usuarioBean.obtenerEstudiantes()}" var="docente" itemLabel="#{docente.nombre}" itemValue="#{docente.id}" />
                             </h:selectOneMenu>
 
+                            <!-- Mostrar el texto "Materia" y permitir seleccionar una opción de menú desplegable -->
                             <h:outputText value="Materia" />
-                            <h:selectOneMenu value="#{nota.materia}" >
+                            <h:selectOneMenu value="#{nota.materia}">
                                 <f:selectItems value="#{materiaBean.obtenerMaterias()}" var="materia" itemLabel="#{materia.nombre}" itemValue="#{materia.id}" />
                             </h:selectOneMenu>
 
+                            <!-- Agregar un botón de comando en el pie de la cuadrícula para guardar la nota -->
                             <f:facet name="footer">
                                 <h:commandButton value="Guardar" action="#{notaBean.guardar(nota)}" styleClass="button" />
                             </f:facet>
@@ -43,8 +52,8 @@
             </h:form>
         </ui:define>
 
-
     </ui:composition>
+
 
 </h:body>
 </html>
