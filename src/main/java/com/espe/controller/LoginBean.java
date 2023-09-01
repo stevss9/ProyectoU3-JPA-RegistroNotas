@@ -56,6 +56,7 @@ public class LoginBean {
 
             // Ejemplo: almacenar el objeto usuario en la sesión
             externalContext.getSessionMap().put("session", usuario);
+            //Control de Excepciones
 
             try {
                 // Redirigir a la página correspondiente según el rol del usuario
