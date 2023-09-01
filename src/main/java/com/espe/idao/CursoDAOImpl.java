@@ -8,7 +8,7 @@ import jakarta.persistence.Query;
 
 import java.util.List;
 
-public class CursoDAOImpl implements ICursoDAO {
+public class CursoDAOImpl implements ICursoDAO  {
     // Crear una instancia de EntityManager para interactuar con la base de datos 
     EntityManager entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
 
