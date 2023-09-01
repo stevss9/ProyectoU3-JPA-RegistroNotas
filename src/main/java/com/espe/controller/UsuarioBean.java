@@ -40,7 +40,7 @@ public class UsuarioBean { ;
         return usuarioDAO.obtenerUsuarios("estudiante");
     }
 
-
+//Metodo Editar 
     public String editar(int id){
 
         Usuario oUsuario;
