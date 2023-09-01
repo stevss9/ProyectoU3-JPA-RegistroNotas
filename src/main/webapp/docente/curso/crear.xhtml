@@ -33,7 +33,7 @@
                             <h:selectOneMenu value="#{nota.materia}" >
                                 <f:selectItems value="#{materiaBean.obtenerMaterias()}" var="materia" itemLabel="#{materia.nombre}" itemValue="#{materia.id}" />
                             </h:selectOneMenu>
-
+                            <!-- Etiquetas de boton -->
                             <f:facet name="footer">
                                 <h:commandButton value="Guardar" action="#{notaBean.guardar(nota)}" styleClass="button" />
                             </f:facet>
