@@ -32,7 +32,7 @@ public class NotaBean {
         return notaDAO.obtenerNotas(estudiante);
     }
 
-    // Método para editar una nota por su ID
+    // Método para realizar la respectiva edicion de  una nota por su ID
     public String editar(int id) {
         // Buscar la nota por su ID utilizando el notaDAO
         Nota oNota = notaDAO.buscar(id);
