@@ -1,5 +1,5 @@
 package com.espe.model;
-
+//importar librerias 
 import jakarta.persistence.*;
 @Entity // Indica que la clase es una entidad JPA
 @Table(name = "notas") // Indica el nombre de la tabla en la base de datos
