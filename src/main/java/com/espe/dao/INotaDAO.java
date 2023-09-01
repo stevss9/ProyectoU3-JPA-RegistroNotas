@@ -1,20 +1,20 @@
 package com.espe.dao;
 
 import com.espe.model.Nota;
-
+//importar las librerias 
 import java.util.List;
 
 public interface INotaDAO {
-    // Método para guardar una nota en la base de datos
+    // Método para guardar una nota en la  bdd
     void guardar(Nota nota);
 
-    // Método para editar la información de una nota en la base de datos
+    // Método para editar la información de una nota en la  bdd
     void editar(Nota nota);
 
-    // Método para buscar una nota por su ID en la base de datos
+    // Método para buscar una nota por su ID en la  bdd
     Nota buscar(int id);
 
-    // Método para obtener una lista de todas las notas en la base de datos
+    // Método para obtener una lista de todas las notas en la  bdd
     List<Nota> obtenerNotas();
 
     // Método para obtener una lista de notas de un estudiante específico
