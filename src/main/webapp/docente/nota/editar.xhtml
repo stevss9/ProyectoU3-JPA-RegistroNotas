@@ -12,39 +12,49 @@
 
 <h:body>
 
-    <ui:composition template = "../templates/commonAdmin.xhtml">
+    <ui:composition template="../templates/commonAdmin.xhtml">
 
-        <ui:define name = "content">
+        <!-- Definir la sección de contenido de la página -->
+        <ui:define name="content">
+            <!-- Crear un formulario con un ID para agregar un nuevo "nota" -->
             <h:form id="agregarNota">
-                <div class="table-container" style="display: flex; justify-content: center"> <!-- Agregar el contenedor para centrar -->
-                    <div>                    <h1>Nuevo nota</h1>
+                <!-- Crear un contenedor para centrar el contenido -->
+                <div class="table-container" style="display: flex; justify-content: center">
+                    <div>
+                        <h1>Nuevo nota</h1>
                         <br></br>
+                        <!-- Crear una cuadrícula de paneles con 2 columnas, espaciado de 20 y borde de 1, con un estilo de tabla -->
                         <h:panelGrid columns="2" cellspacing="20" border="1" class="table-style">
 
+                            <!-- Mostrar el texto "Nombre" y permitir la entrada de texto en un campo -->
                             <h:outputText value="Nombre" />
                             <h:inputText value="#{nota.nombre}" />
 
+                            <!-- Mostrar el texto "Contraseña" y permitir la entrada de texto en un campo -->
                             <h:outputText value="Contraseña" />
                             <h:inputText value="#{nota.contrasena}" />
 
-
+                            <!-- Mostrar el texto "Email" y permitir la entrada de texto en un campo -->
                             <h:outputText value="Email" />
                             <h:inputText value="#{nota.correo}" />
 
-
+                            <!-- Mostrar el texto "Rol" y permitir seleccionar una opción de menú desplegable -->
                             <h:outputText value="Rol" />
-                            <h:selectOneMenu   styleClass="form-control radius-none" value="#{nota.rol}" disabled="true">
+                            <h:selectOneMenu styleClass="form-control radius-none" value="#{nota.rol}" disabled="true">
                                 <f:selectItem itemValue="estudiante" itemLabel="estudiante" />
                                 <f:selectItem itemValue="docente" itemLabel="docente" />
                                 <f:selectItem itemValue="administrador" itemLabel="administrador" />
                             </h:selectOneMenu>
 
+                            <!-- Mostrar el texto "Direccion" y permitir la entrada de texto en un campo -->
                             <h:outputText value="Direccion" />
                             <h:inputText value="#{nota.direccion}" />
 
+                            <!-- Mostrar el texto "Telefono" y permitir la entrada de texto en un campo -->
                             <h:outputText value="Telefono" />
                             <h:inputText value="#{nota.telefono}" />
 
+                            <!-- Agregar un botón de comando en el pie de la cuadrícula para actualizar los datos -->
                             <f:facet name="footer">
                                 <h:commandButton value="Guardar" action="#{notaBean.actualizar(nota)}" styleClass="button" />
                             </f:facet>
@@ -54,8 +64,8 @@
             </h:form>
         </ui:define>
 
-
     </ui:composition>
+
 
 </h:body>
 
