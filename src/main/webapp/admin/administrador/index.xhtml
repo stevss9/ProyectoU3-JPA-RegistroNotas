@@ -44,6 +44,7 @@
                     </thead>
                     <tbody>
                     <ui:repeat value="#{usuarioBean.obtenerAdministardores()}" var="usuario">
+<!-- formulario llama a la bdd -->
                         <tr>
                             <td style="text-align: center">#{usuario.nombre}</td>
                             <td style="text-align: center">#{usuario.correo}</td>
