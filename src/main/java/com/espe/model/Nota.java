@@ -1,7 +1,7 @@
 package com.espe.model;
 
 import jakarta.persistence.*;
-@Entity // Indica que esta clase es una entidad JPA
+@Entity // Indica que la clase es una entidad JPA
 @Table(name = "notas") // Indica el nombre de la tabla en la base de datos
 public class Nota {
     @Id // Indica que el siguiente atributo es la clave primaria de la entidad
