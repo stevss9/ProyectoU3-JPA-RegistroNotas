@@ -11,38 +11,39 @@
 
 
 <h:body>
-    <ui:composition template = "../templates/commonAdmin.xhtml">
+    <ui:composition template="../templates/commonAdmin.xhtml">
 
-        <ui:define name = "content"  >
+        <!-- Definir la sección de contenido de la página -->
+        <ui:define name="content">
             <div class="container">
-                <div  class="content">
+                <div class="content">
                     <div style="display: flex; justify-content: center">
+                        <!-- Mostrar el título "Listado de Cursos" -->
                         <h1 style="color: #10109b">Listado de Cursos</h1>
                     </div>
                     <h:form>
+                        <!-- Crear un formulario vacío -->
+                    </h:form>
 
-
-                    </h:form  >
-
-                    <table
-                            id="mytable" class="table align-middle mb-0 bg-white"
-                            style="width: 100%">
+                    <!-- Crear una tabla para mostrar los cursos -->
+                    <table id="mytable" class="table align-middle mb-0 bg-white" style="width: 100%">
                         <thead class="bg-light">
                         <tr class="header-row">
+                            <!-- Encabezados de las columnas de la tabla -->
                             <th>Nombre</th>
-
                             <th>Acciones</th>
                         </tr>
                         </thead>
                         <tbody>
+                        <!-- Iterar a través de los cursos obtenidos y mostrar los detalles en una fila de la tabla -->
                         <ui:repeat value="#{cursoBean.obtenerCursos()}" var="curso">
                             <tr>
                                 <td style="text-align: center">#{curso.nombre}</td>
-
                                 <td>
                                     <h:form>
+                                        <!-- Agregar un botón de comando para "Ver materias" asociadas a un curso -->
                                         <h:commandButton value="Ver materias" styleClass="button"
-                                                         action="#{materiaBean.obtenerMateriaPorCurso(curso.id,sessionScope.session.id)}" />
+                                                         action="#{materiaBean.obtenerMateriaPorCurso(curso.id, sessionScope.session.id)}" />
                                     </h:form>
                                 </td>
                             </tr>
@@ -52,7 +53,6 @@
                 </div>
             </div>
         </ui:define>
-
 
     </ui:composition>
 
