@@ -66,7 +66,7 @@ public class MateriaBean {
 
         // Obtener el mapa de sesión de JSF
         Map<String, Object> sessionMap = FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
-        // Almacenar la materia vacía en el mapa de sesión para usarla en la vista de creación
+        // Almacenar la materia vacía en el mapa de sesión para usarla en la vista de creación de las materias que se añade
         sessionMap.put("materia", oMateria);
         return "./crear.xhtml";
     }
