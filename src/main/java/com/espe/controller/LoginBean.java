@@ -1,4 +1,3 @@
-// Importaciones de clases necesarias
 package com.espe.controller;
 
 import com.espe.dao.IUsuarioDAO;
