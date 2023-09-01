@@ -12,60 +12,7 @@
 
 <h:body>
 
-    <ui:composition template = "../templates/commonAdmin.xhtml">
 
-        <ui:define name = "content"  >
-            <div class="container">
-                <div  class="content">
-                    <div style="display: flex; justify-content: center">
-                    <h1 style="color: #10109b">Listado de Usuarios</h1>
-                    </div>
-            <h:form>
-                <div>
-                    <h:commandButton  styleClass="button-agregar" value="Nuevo usuario"
-                                      action="#{usuarioBean.nuevo()}" />
-                </div>
-
-            </h:form  >
-
-                <table
-                        id="mytable" class="table align-middle mb-0 bg-white"
-                        style="width: 100%">
-                    <thead class="bg-light">
-                    <tr class="header-row">
-                        <th>Nombre</th>
-                        <th>Correo</th>
-                        <th>Telefono</th>
-                        <th>Direccion</th>
-                        <th>Rol</th>
-
-                        <th>Acciones</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <ui:repeat value="#{usuarioBean.obtenerUsuarios()}" var="usuario">
-                        <tr>
-                            <td style="text-align: center">#{usuario.nombre}</td>
-                            <td style="text-align: center">#{usuario.correo}</td>
-                            <td style="text-align: center">#{usuario.telefono}</td>
-                            <td style="text-align: center">#{usuario.direccion}</td>
-                            <td style="text-align: center">#{usuario.rol}</td>
-                            <td>
-                                <h:form>
-                                    <h:commandButton value="Editar" styleClass="button"
-                                                     action="#{usuarioBean.editar(usuario.id)}" />
-                                </h:form>
-                            </td>
-                        </tr>
-                    </ui:repeat>
-                    </tbody>
-                </table>
-                </div>
-            </div>
-        </ui:define>
-
-
-    </ui:composition>
 
 </h:body>
 </html>
