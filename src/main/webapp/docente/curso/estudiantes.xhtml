@@ -11,54 +11,56 @@
 
 
 <h:body>
-    <!--Formulario de estudiante(vista)-->
 
-    <ui:composition template = "../templates/commonAdmin.xhtml">
 
-        <ui:define name = "content"  >
+    <ui:composition template="../templates/commonAdmin.xhtml">
+
+        <!-- Definir la sección de contenido de la página -->
+        <ui:define name="content">
             <div class="container">
-                <div  class="content">
+                <div class="content">
                     <div style="display: flex; justify-content: center">
-                    <h1 style="color: #10109b">Listado de Usuarios</h1>
+                        <!-- Mostrar el título "Listado de Usuarios" -->
+                        <h1 style="color: #10109b">Listado de Usuarios</h1>
                     </div>
-            <h:form>
-                <div>
+                    <h:form>
+                        <!-- Crear un formulario vacío -->
+                        <div>
+                            <!-- No se incluye contenido dentro del formulario en este caso -->
+                        </div>
+                    </h:form>
 
-                </div>
-
-            </h:form  >
-
-                <table
-                        id="mytable" class="table align-middle mb-0 bg-white"
-                        style="width: 100%">
-                    <thead class="bg-light">
-                    <tr class="header-row">
-                        <th>Nombre</th>
-                        <th>Correo</th>
-                        <th>Telefono</th>
-                        <th>Direccion</th>
-                        <th>Rol</th>
-
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <ui:repeat value="#{estudiantes}" var="usuario">
-                        <tr>
-                            <td style="text-align: center">#{usuario.nombre}</td>
-                            <td style="text-align: center">#{usuario.correo}</td>
-                            <td style="text-align: center">#{usuario.telefono}</td>
-                            <td style="text-align: center">#{usuario.direccion}</td>
-                            <td style="text-align: center">#{usuario.rol}</td>
+                    <!-- Crear una tabla para mostrar los usuarios -->
+                    <table id="mytable" class="table align-middle mb-0 bg-white" style="width: 100%">
+                        <thead class="bg-light">
+                        <tr class="header-row">
+                            <!-- Encabezados de las columnas de la tabla -->
+                            <th>Nombre</th>
+                            <th>Correo</th>
+                            <th>Telefono</th>
+                            <th>Direccion</th>
+                            <th>Rol</th>
                         </tr>
-                    </ui:repeat>
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                        <!-- Iterar a través de los usuarios obtenidos y mostrar los detalles en una fila de la tabla -->
+                        <ui:repeat value="#{estudiantes}" var="usuario">
+                            <tr>
+                                <td style="text-align: center">#{usuario.nombre}</td>
+                                <td style="text-align: center">#{usuario.correo}</td>
+                                <td style="text-align: center">#{usuario.telefono}</td>
+                                <td style="text-align: center">#{usuario.direccion}</td>
+                                <td style="text-align: center">#{usuario.rol}</td>
+                            </tr>
+                        </ui:repeat>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </ui:define>
 
-
     </ui:composition>
+
 
 </h:body>
 </html>
