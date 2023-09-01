@@ -11,35 +11,33 @@
 
 
 <h:body>
+    <ui:composition template="../templates/commonAdmin.xhtml">
 
-    <ui:composition template = "../templates/commonAdmin.xhtml">
-
-        <ui:define name = "content"  >
+        <!-- Definir la sección de contenido de la página -->
+        <ui:define name="content">
             <div class="container">
-                <div  class="content">
+                <div class="content">
                     <div style="display: flex; justify-content: center">
                         <h1 style="color: #10109b">Listado de Notas</h1>
                     </div>
                     <h:form>
                         <div>
-                            <h:commandButton  styleClass="button-agregar" value="Nuevo nota"
-                                              action="#{notaBean.nuevo()}" />
+                            <h:commandButton styleClass="button-agregar" value="Nuevo nota"
+                                             action="#{notaBean.nuevo()}" />
                         </div>
+                    </h:form>
 
-                    </h:form  >
-
-                    <table
-                            id="mytable" class="table align-middle mb-0 bg-white"
-                            style="width: 100%">
+                    <table id="mytable" class="table align-middle mb-0 bg-white" style="width: 100%">
                         <thead class="bg-light">
                         <tr class="header-row">
                             <th>Nota</th>
-                            <th>Estuduante</th>
+                            <th>Estudiante</th>
                             <th>Materia</th>
                             <th>Acciones</th>
                         </tr>
                         </thead>
                         <tbody>
+                        <!-- Iterar a través de las notas obtenidas y mostrar los detalles en una fila de la tabla -->
                         <ui:repeat value="#{notaBean.obtenerNotas()}" var="nota">
                             <tr>
                                 <td style="text-align: center">#{nota.nota}</td>
@@ -58,7 +56,6 @@
                 </div>
             </div>
         </ui:define>
-
 
     </ui:composition>
 
