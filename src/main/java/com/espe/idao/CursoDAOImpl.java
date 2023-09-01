@@ -1,5 +1,5 @@
 package com.espe.idao;
-
+//importacion de las librerias
 import com.espe.dao.ICursoDAO;
 import com.espe.model.JPAUtil;
 import com.espe.model.Curso;
@@ -9,7 +9,7 @@ import jakarta.persistence.Query;
 import java.util.List;
 
 public class CursoDAOImpl implements ICursoDAO {
-    // Crear una instancia de EntityManager para interactuar con la base de datos
+    // Crear una instancia de EntityManager para interactuar con la base de datos 
     EntityManager entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
 
     @Override
@@ -21,6 +21,7 @@ public class CursoDAOImpl implements ICursoDAO {
     }
 
     @Override
+    //metodo de editar en la bdd
     public void editar(Curso curso) {
         entityManager.getTransaction().begin();
         entityManager.merge(curso); // Actualizar el curso en la base de datos
