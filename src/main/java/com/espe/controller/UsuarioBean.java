@@ -15,6 +15,8 @@ import java.util.Map;
 
 @RequestScoped
 @Named
+
+    //Estructura
 public class UsuarioBean { ;
     IUsuarioDAO usuarioDAO = new UsuarioDAOImpl();
     //Prueba para pasar datos quemados a la vista 
