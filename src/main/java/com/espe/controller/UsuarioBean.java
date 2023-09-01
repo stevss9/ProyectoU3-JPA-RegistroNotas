@@ -85,16 +85,24 @@ public class UsuarioBean { ;
     }
 
 
-    public String nuevoDocente(){
+    public String nuevoDocente() {
+        // Crear un nuevo objeto Usuario
         Usuario oUsuario = new Usuario();
-        oUsuario.setMateria(0);
-        oUsuario.setRol("docente");
-        //crear una coleccion de tipo map
+
+        // Establecer valores predeterminados en el objeto Usuario
+        oUsuario.setMateria(0);  // Establecer el ID de la materia (posiblemente para asignar una materia por defecto)
+        oUsuario.setRol("docente");  // Establecer el rol del usuario como "docente"
+
+        // Obtener el SessionMap de la instancia actual de JSF
         Map<String, Object> sessionMap = FacesContext.getCurrentInstance().getExternalContext().getSessionMap();
-        //pasar el objeto por medio del SessionMap hacia la vista
+
+        // Almacenar el objeto Usuario en el SessionMap con el nombre "usuario"
         sessionMap.put("usuario", oUsuario);
+
+        // Redirigir a la página "crear.xhtml"
         return "./crear.xhtml";
     }
+
 
     public String nuevoEstudiante(){
         Usuario oUsuario = new Usuario();
