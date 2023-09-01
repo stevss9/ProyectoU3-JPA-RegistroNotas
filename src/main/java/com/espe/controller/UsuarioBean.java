@@ -106,7 +106,7 @@ public class UsuarioBean { ;
         sessionMap.put("usuario", oUsuario);
         return "./crear.xhtml";
     }
-
+//Metodo para guardar un usuario y que se redirija al index
     public String guardar(Usuario usuario){
         usuarioDAO.guardar(usuario);
         return "./index.xhtml";
