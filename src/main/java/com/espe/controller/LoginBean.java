@@ -38,6 +38,7 @@ public class LoginBean {
     public String getPassword() {
         return password;
     }
+    //Solo necesitamos 2 metodos para el login, que es usuario y contraseña
 
     public void setPassword(String password) {
         this.password = password;
