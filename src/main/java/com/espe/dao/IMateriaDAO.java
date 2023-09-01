@@ -8,7 +8,7 @@ public interface IMateriaDAO {
     // Método para guardar una materia en la base de datos
     void guardar(Materia materia);
 
-    // Método para editar la información de una materia en la base de datos
+    // Método para editar la información de una materia en la base de datoss
     void editar(Materia materia);
 
     // Método para buscar una materia por su ID en la base de datos
