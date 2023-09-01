@@ -11,7 +11,7 @@ import jakarta.inject.Named;
 import java.util.List;
 import java.util.Map;
 
-// Anotaciones para indicar el alcance y nombre del bean gestionado
+// Anotaciones para indicar el alcance y nombre del beaN gestionado
 @RequestScoped
 @Named
 public class MateriaBean {
