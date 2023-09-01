@@ -17,7 +17,7 @@ import java.util.Map;
 @Named
 public class UsuarioBean { ;
     IUsuarioDAO usuarioDAO = new UsuarioDAOImpl();
-    //Prueba para pasar datos quemados a la vista
+    //Prueba para pasar datos quemados a la vista 
     public List<Usuario> obtenerUsuarios(){
         return usuarioDAO.obtenerUsuarios();
     }
