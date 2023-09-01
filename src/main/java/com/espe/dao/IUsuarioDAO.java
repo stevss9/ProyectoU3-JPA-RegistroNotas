@@ -1,5 +1,5 @@
 package com.espe.dao;
-
+//importaciones de librerias
 import com.espe.model.Usuario;
 
 import java.util.List;
@@ -23,7 +23,7 @@ public interface IUsuarioDAO {
     // Método para obtener una lista de estudiantes por materia
     List<Usuario> obtenerEstudiantesPorMateria(int materia);
 
-    // Método para eliminar un usuario por su ID de la base de datos
+    // Método para eliminar un usuario por su ID de la bdd
     void eliminar(int id);
 
     // Método para buscar un usuario por su nombre de usuario (utilizado para autenticación)
