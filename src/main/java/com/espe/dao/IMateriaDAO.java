@@ -14,7 +14,7 @@ public interface IMateriaDAO {
     // Método para buscar una materia por su ID en la base de datos
     Materia buscar(int id);
 
-    // Método para obtener una lista de todas las materias en la base de datos
+    // Método para obtener una lista de todas las materias en la bdd
     List<Materia> obtenerMaterias();
 
     // Método para obtener una lista de materias por curso y docente
