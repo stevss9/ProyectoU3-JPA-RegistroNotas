@@ -8,7 +8,7 @@ public class Nota {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Genera automáticamente el valor de la clave primaria
     private Long id;
 
-    @Column // Indica que el siguiente atributo es una columna en la tabla
+    @Column // Indica que el siguiente atributo es una columna en la tabl
     private double nota;
 
     @Column // Indica que el siguiente atributo es una columna en la tabla
