@@ -13,6 +13,7 @@ public class MateriaDAOImpl implements IMateriaDAO {
     EntityManager entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
 
     @Override
+    //opcion de guardae a materia
     public void guardar(Materia materia) {
         entityManager.getTransaction().begin();
         entityManager.persist(materia); // Persistir la materia en la base de datos
