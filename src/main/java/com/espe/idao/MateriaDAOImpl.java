@@ -49,7 +49,7 @@ public class MateriaDAOImpl implements IMateriaDAO {
     @Override
     public List<Materia> obtenerMateriasPorCurso(int curso, int docente) {
         List<Materia> listaMaterias;
-        // Sentencia JPQL para obtener las materias por curso y docente
+        // Sentencia JPQL para obtener las materias por curso y docentes
         Query query = entityManager.createQuery("SELECT u FROM Materia u WHERE u.curso = :curso AND u.usuario = :docente");
         query.setParameter("curso", curso);
         query.setParameter("docente", docente);
